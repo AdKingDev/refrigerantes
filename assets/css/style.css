@@ -77,30 +77,11 @@
     right: 30px;
 }
 
-@keyframes toActive {
-    from {
-        top: 100%;
-        opacity: 0;
-    }
-}
-
-.item.active img.fruit {
-    animation: toActive .5s ease-in-out 1;
-}
-
-.item.active .title {
-    animation: toActive .5s ease-in-out 1;
-}
-
-.item.active .refri {
-    animation: toActive .5s ease-in-out 1;
-}
-
 footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif, 'Arial Narrow', Arial, sans-serif, sans-serif;
     width: 100%;
     color: var(--footer-color);
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     text-align: center;
@@ -120,4 +101,23 @@ footer a:hover {
     color: #f58184;
     transition: all .3s ease-in-out;
     transform: translateY(-2px);
+}
+
+@keyframes toActive {
+    from {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+.item.active img.fruit {
+    animation: toActive .5s ease-in-out 1;
+}
+
+.item.active .title {
+    animation: toActive .5s ease-in-out 1;
+}
+
+.item.active .refri {
+    animation: toActive .5s ease-in-out 1;
 }
