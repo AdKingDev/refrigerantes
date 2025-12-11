@@ -12,6 +12,8 @@ next.onclick = () => {
     // Incrementa o índice do item ativo, voltando ao início se necessário
     active = active >= count - 1 ? 0 : active + 1;
     list[active].classList.add('active');
+
+    updateFooterColor();
 }
 
 prev.onclick = () => {
@@ -21,4 +23,13 @@ prev.onclick = () => {
     // Decrementa o índice do item ativo, voltando ao fim se necessário
     active = active <= 0 ? count - 1 : active - 1;
     list[active].classList.add('active');
+
+    updateFooterColor();
+}
+
+function updateFooterColor() {
+    const activeItem = document.querySelector('.item.active');
+    const footerColor = activeItem.style.getPropertyValue('--footer-text');
+
+    document.documentElement.style.setProperty('--footer-color', footerColor);
 }

@@ -1,3 +1,7 @@
+:root {
+    --footer-color: #000000;
+}
+
 .item {
     display: none;
     visibility: hidden;
@@ -90,4 +94,30 @@
 
 .item.active .refri {
     animation: toActive .5s ease-in-out 1;
+}
+
+footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif, 'Arial Narrow', Arial, sans-serif, sans-serif;
+    width: 100%;
+    color: var(--footer-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 5;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--footer-color);
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform .3s ease-in-out, color .3s ease-in-out;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #f58184;
+    transition: all .3s ease-in-out;
+    transform: translateY(-2px);
 }
