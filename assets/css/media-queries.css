@@ -1,0 +1,95 @@
+/* Responsividade para Apple Watch */
+@media (max-width: 200px) {
+    .item .title {
+        font-size: 2.3rem;
+        top: 15%;
+    }
+
+    .item .fruit {
+        width: 160%;
+        top: 5%;
+        left: -30%;
+    }
+
+    .item .refri {
+        width: 150px;
+        top: 50%;
+    }
+
+    #prev, #next {
+        width: 25px;
+        height: 25px;
+        font-size: 1rem;
+        background-color: transparent;
+    }
+
+    #prev {
+        left: 10px;
+    }
+
+    #next {
+        right: 10px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (min-width: 360px) and (max-width: 480px) {
+    .item .title {
+        font-size: 4rem;
+        top: 25%;
+    }
+
+    .item .fruit {
+        width: 150%;
+        top: 30%;
+        left: -30%;
+    }
+
+    .item .refri {
+        width: 350px;
+        top: 53%;
+    }
+
+    #prev, #next {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    #prev {
+        left: 10px;
+    }
+
+    #next {
+        right: 10px;
+    }
+
+    footer {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+}
+
+/* Responsividade para tablets e Galaxy Fold2 */
+@media (min-width: 481px) and (max-width: 900px) {
+    .item .title {
+        font-size: 10rem;
+        top: 20%;
+    }
+
+    .item .fruit {
+        width: 160%;
+        top: 10%;
+        left: -35%;
+    }
+
+    footer {
+        font-size: 1.6rem;
+    }
+}
+
