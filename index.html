@@ -3,41 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refri</title>
+
+    <title>Refrigerantes de Frutas</title>
+
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/media-queries.css">
+
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
 </head>
+
 <body>
+    <!-- Slide Refrigerante de Morango -->
+    <div class="item active" style="--background: #EA3D41; --footer-text: #000000">
+        <div class="title">Morango</div>
+        <img src="./assets/images/Morango-refrigerante-foregroundBlur.png" class="fruit">
+        <img src="./assets/images/Morango-refrigerante.png" class="refri">
+    </div>
 
-    <main>
-        <div class="item active" style="--background: #EA3D41; --footer-text: #000000">
-            <div class="title">Morango</div>
-            <img src="./assets/images/Morango-refrigerante-foregroundBlur.png" class="fruit">
-            <img src="./assets/images/Morango-refrigerante.png" class="refri">
-        </div>
+    <!-- Slide Refrigerante de Abacate -->
+    <div class="item" style="--background: #2D5643; --footer-text: #aad852">
+        <div class="title">Abacate</div>
+        <img src="./assets/images/Abacate-refrigerante-foregroundBlur.png" class="fruit">
+        <img src="./assets/images/Abacate-refrigerante.png" class="refri">
+    </div>
 
-        <div class="item" style="--background: #2D5643; --footer-text: #aad852">
-            <div class="title">Abacate</div>
-            <img src="./assets/images/Abacate-refrigerante-foregroundBlur.png" class="fruit">
-            <img src="./assets/images/Abacate-refrigerante.png" class="refri">
-        </div>
+    <!-- Slide Refrigerante de Laranja -->
+    <div class="item" style="--background: #E7A043; --footer-text: #ffffff">
+        <div class="title">Laranja</div>
+        <img src="./assets/images/Laranja-refrigerante-foregroundBlur.png" class="fruit">
+        <img src="./assets/images/Laranja-refrigerante.png" class="refri">
+    </div>
 
-        <div class="item" style="--background: #E7A043; --footer-text: #ffffff">
-            <div class="title">Laranja</div>
-            <img src="./assets/images/Laranja-refrigerante-foregroundBlur.png" class="fruit">
-            <img src="./assets/images/Laranja-refrigerante.png" class="refri">
-        </div>
+    <!-- Botões de navegação -->
+    <div class="arrow">
+        <button id="prev"> &lt; </button>
+        <button id="next"> &gt; </button>
+    </div>
 
-        <div class="arrow">
-            <button id="prev"> < </button>
-            <button id="next"> > </button>
-        </div>
-    </main>
-
+    <!-- Créditos -->
     <footer>
-        <p>Desenvolvido por <a href="https://www.instagram.com/adking.dev" target="_blank">@adking.dev</a></p>
+        <p>Desenvolvido por <a href="https://www.instagram.com/adking.dev" target="_blank">@adking.dev</a>
     </footer>
 </body>
+
+<!-- Script do slide -->
 <script src="./assets/javascript/script.js"></script>
 </html>

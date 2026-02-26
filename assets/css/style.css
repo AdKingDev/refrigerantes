@@ -2,22 +2,27 @@
     --footer-color: #000000;
 }
 
+/* Slide padrão (inativo) */
 .item {
     display: none;
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    display: none;
+    
     width: 100%;
     height: 100%;
+
     position: absolute;
     top: 0;
     left: 0;
+
     overflow: hidden;
+
     background-color: var(--background);
     transition: opacity .5s ease-in-out;
 }
 
+/* Slide ativo */
 .item.active {
     display: block;
     visibility: visible;
@@ -25,48 +30,60 @@
     pointer-events: auto;
 }
 
-.item .title {
+/* Título do slide */
+.item > .title {
     font-size: 12rem;
     color: #fff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     text-align: center;
+
     position: absolute;
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
 }
 
-.item .fruit {
+/* Imagem da fruta */
+.item > .fruit {
     width: 90%;
     position: absolute;
     top: 0;
+
     z-index: 3;
 }
 
-.item .refri {
+/* Imagem da lata */
+.item > .refri {
     z-index: 2;
     width: 600px;
 
     position: absolute;
     left: 50%;
     top: 50%;
+
     transform: translate(-50%, -50%);
 }
 
+/* Botões de navegação */
 #prev, #next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
     width: 50px;
     height: 50px;
+
     background-color: #eee9;
     border: 1px solid #fff;
+    border-radius: 50%;
+
     font-size: x-large;
     font-family: monospace;
+
     cursor: pointer;
     z-index: 4;
-    border-radius: 50%;
 }
 
 #prev {
@@ -77,32 +94,40 @@
     right: 30px;
 }
 
+/* Créditos */
 footer {
-    font-family: Verdana, Geneva, Tahoma, sans-serif, 'Arial Narrow', Arial, sans-serif, sans-serif;
-    width: 100%;
-    color: var(--footer-color);
     position: fixed;
     bottom: 0;
     left: 0;
+    
+    color: var(--footer-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif, 'Arial Narrow', Arial, sans-serif, sans-serif;
+    font-size: 0.8rem;
+
+    width: 100%;
+    
     text-align: center;
     z-index: 5;
 }
 
-footer a {
+footer > p > a {
     text-decoration: none;
     color: var(--footer-color);
+
     display: inline-block;
+
     transform: translateY(0);
     transition: transform .3s ease-in-out, color .3s ease-in-out;
 }
 
-footer a:hover {
+footer > p > a:hover {
     text-decoration: underline;
     color: #f58184;
     transition: all .3s ease-in-out;
     transform: translateY(-2px);
 }
 
+/* Animação de entrada */
 @keyframes toActive {
     from {
         top: 100%;
@@ -110,14 +135,9 @@ footer a:hover {
     }
 }
 
-.item.active img.fruit {
-    animation: toActive .5s ease-in-out 1;
-}
-
-.item.active .title {
-    animation: toActive .5s ease-in-out 1;
-}
-
+/* Aplica animação ao ativar slide */
+.item.active img.fruit,
+.item.active .title,
 .item.active .refri {
     animation: toActive .5s ease-in-out 1;
 }
